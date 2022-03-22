@@ -104,8 +104,7 @@ const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cript
 
         try {
             const respuesta = await fetch(url)
-            const resultado = await respuesta.json()
-            const cotizacion = await resultado
+            const cotizacion = await respuesta.json()
             mostrarCotizacionHTML(cotizacion.DISPLAY[criptomoneda][moneda]);
         } catch (error) {
             console.log(error);
